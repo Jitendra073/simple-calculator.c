@@ -1,52 +1,44 @@
-# Prerequisites
-*.d
+/******************************************************************************
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
 
-# Linker output
-*.ilk
-*.map
-*.exp
+*******************************************************************************/
+#include <stdio.h>
 
-# Precompiled Headers
-*.gch
-*.pch
+int main() {
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+  char operator;
+  double a, b ;
+  printf("Enter an operator (+, -, *, /): ");
+  scanf("%c", &operator);
+  
+  printf("Enter the value of A and B: ");
+  scanf("%lf %lf", &a, &b);
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+  switch (operator) {
+    case '+':
+      printf("%.1lf + %.1lf = %.1lf", a, b, a+b);
+      break;
+      
+    case '-':
+      printf("%.1lf - %.1lf = %.1lf", a,b,a-b);
+      break;
+      
+    case '*':
+      printf("%.1lf * %.1lf = %.1lf", a,b,a*b);
+      break;
+      
+    case '/':
+      printf("%.1lf / %.1lf = %.1lf", a,b,a/b);
+      break;
+      
+    default:
+      printf("ENTER VALID OPERATOR");
+  }
+    
+    return(0);
+    
+}
